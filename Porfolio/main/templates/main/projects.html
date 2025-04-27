@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Мои проекты</h2>
+    <div class="row">
+      <!-- Проект 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'main/images/project1.jpg' %}" class="card-img-top" alt="Проект 1">
+          <div class="card-body">
+            <h5 class="card-title">Танки</h5>
+            <p class="card-text">Python</p>
+            <a href="#" class="btn btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!-- Проект 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="{% static 'main/images/project2.jpg' %}" class="card-img-top" alt="Проект 2">
+          <div class="card-body">
+            <h5 class="card-title">Догони меня</h5>
+            <p class="card-text">Python + </p>
+            <a href="#" class="btn btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

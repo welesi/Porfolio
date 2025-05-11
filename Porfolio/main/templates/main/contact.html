@@ -2,27 +2,53 @@
 {% load static %}
 
 {% block content %}
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Свяжитесь со мной</h2>
-    <div class="row">
-      <div class="col-md-6 mx-auto">
-        <form method="post">
-          {% csrf_token %}
-          <div class="mb-3">
-            <label for="name" class="form-label">Имя</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+<!-- Герой-секция (полноэкранная) -->
+<section id="home" class="vh-100 d-flex align-items-center bg-gradient-dark">
+  <div class="container text-center animate__animated animate__fadeIn">
+    <img src="{% static 'main/images/avatar.jpg' %}"
+         class="rounded-circle mb-4 border border-3 border-primary shadow"
+         width="150"
+         alt="Фото">
+    <h1 class="display-3 fw-bold mb-3">Сарафанников Велеслав</h1>
+    <p class="lead text-muted mb-4">Full-stack разработчик | Python/Django | React</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="http://127.0.0.1:8000/projects" class="btn btn-primary btn-lg px-4">
+        <i class="bi bi-eye me-2"></i>Мои работы
+      </a>
+      <a href="#contact" class="btn btn-outline-light btn-lg px-4">
+        <i class="bi bi-send me-2"></i>Связаться
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- О себе -->
+<section id="about" class="py-5 bg-dark2">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 animate__animated animate__fadeInLeft">
+        <h2 class="fw-bold mb-4"><i class="bi bi-person-badge me-2"></i>Обо мне</h2>
+        <p class="lead">Привет! Я разрабатываю веб-приложения уже 3 года.</p>
+        <p>Специализируюсь на создании высоконагруженных сервисов с использованием Django и современных фронтенд-технологий.</p>
+        <div class="mt-4">
+          <a href="#" class="btn btn-outline-primary me-2">
+            <i class="bi bi-download me-1"></i> Резюме
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 animate__animated animate__fadeInRight">
+        <div class="card bg-black border-0 shadow-lg">
+          <div class="card-body p-4">
+            <h5 class="card-title text-primary"><i class="bi bi-graph-up me-2"></i>Мой стек</h5>
+            <div class="skills-tags mt-3">
+              <span class="badge bg-primary-gradient me-2 mb-2">Python</span>
+              <span class="badge bg-primary-gradient me-2 mb-2">Django</span>
+              <span class="badge bg-primary-gradient me-2 mb-2">JavaScript</span>
+              <span class="badge bg-primary-gradient me-2 mb-2">React</span>
+              <span class="badge bg-primary-gradient me-2 mb-2">PostgreSQL</span>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Сообщение</label>
-            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Отправить</button>
-        </form>
+        </div>
       </div>
     </div>
   </div>
